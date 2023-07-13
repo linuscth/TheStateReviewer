@@ -17,6 +17,16 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
     // add code
+    secret: 'confidential',
+  cookie: {
+    maxAge: 3600000, // expires in after an hour
+
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
 }
 
 app.use(session(sess));
