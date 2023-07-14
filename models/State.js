@@ -18,15 +18,6 @@ State.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        population: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        },
-        createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
     },
     {
         sequelize,

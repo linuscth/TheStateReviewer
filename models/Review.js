@@ -19,19 +19,18 @@ Review.init(
                 max: 5,
             },
         },
-        comment: {
+        review_details: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
+        review_topic: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        }
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'review',
