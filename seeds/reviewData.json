@@ -1,0 +1,37 @@
+[
+    {
+        "rating": 5,
+        "review_topic": "San Diego, California Tacos El Gordo is real good",
+        "review_details": "Five stars for the Adobada tacos! The ordering process is confusing and hilariously inefficient, especially for a non-Spanish speaker. I had a sweet guy offer to be my translator and guide me through the process. Adobada is basically al pastor with a spicy sauce, he said. The guy working there said they're the same thing. You just get the taco with everything (including sauce), or you don't. I was just glad to get my tacos! We only tried the carne asada and adobada meat. I liked both but would get the fries with the adobada meat next time. And the fries take forever. A delicious and fun experience, especially if you don't have time to cross the border!",
+        "state_id": 5,
+        "user_id": 4
+    },
+    {
+        "rating": 2,
+        "review_topic": "skid row, really ? ",
+        "review_details": "stay away from it! thats the most dangerious zone in LA downtown",
+        "state_id": 5,
+        "user_id": 3
+    },
+    {
+        "rating": 4,
+        "review_topic": " go check out US Space & Rocket Center ",
+        "review_details": "Located in the city of Huntsville in Northern Alabama, the US Space and Rocket Center is a mecca of all things space and is one of the most visited attractions in Alabama. Some of the key highlights are the shuttle experience or flight simulator, both of which make it feel like you are experiencing space exploration or ground control in real life. ",
+        "state_id": 1,
+        "user_id": 7
+    },
+    {
+        "rating": 5,
+        "review_topic": "Anchorage",
+        "review_details": "As Alaska's largest city, Anchorage is an absolute must on any Alaskan bucket list. It is a sprawling city with quiet, serene corners and a steady thrum of city life at its core. Take a hike in the stunning Chugach State Park or visit one of the numerous five star resorts in the area for a vacation you will never forget.",
+        "state_id": 2,
+        "user_id": 4
+    },
+    {
+        "rating": 2,
+        "review_topic": "Phoenix Zoo, a must go place ",
+        "review_details": "If you are looking for some of the best places to go in Phoenix, you cannot go wrong with the popular Phoenix Zoo.The zoo boasts several exhibits, such as the African savanna, Asian forest, and South American rainforest, allowing visitors to get up close with exotic animals. All these features make the Phoenix Zoo a must-visit attraction in Phoenix.",
+        "state_id": 3,
+        "user_id": 3
+    }
+]
