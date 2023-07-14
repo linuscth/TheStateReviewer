@@ -18,14 +18,22 @@ Review.init(
                 min: 0,
                 max: 5,
             },
+        },        
+        review_topic: {
+            type: DataTypes.TEXT,
+            allowNull: false
         },
         review_details: {
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        review_topic: {
-            type: DataTypes.TEXT,
-            allowNull: false
+        state_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'state',
+                key: 'id'
+            }
         }
     },
     {
