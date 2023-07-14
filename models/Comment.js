@@ -3,7 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 // Import connection
 const sequelize = require('../config/connection');
 
-class Comment extends Model {}
+class Comment extends Model { }
 
 // Define comment attributes
 Comment.init(
@@ -17,15 +17,25 @@ Comment.init(
         user_comment: {
             type: DataTypes.TEXT,
             allowNull: false,
-        }
-    },
-    user_id: {
+        },
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-                references:{
+            references: {
                 model: "user",
-                    key: "id"
+                key: "id"
+            },
         },
+        review_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "reivew",
+                key: "id"
+            },
+        }
+
+    },
     {
         sequelize,
         timestamps: true,
