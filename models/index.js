@@ -18,10 +18,20 @@ Review.belongsTo(State, {
   foreignKey: 'state_id',
 });
 
-User.hasMany(Comment);
-Comment.belongsTo(User);
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
 
-Review.hasMany(Comment);
-Comment.belongsTo(Review);
+});
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+
+});
+
+Review.hasMany(Comment, {
+  foreignKey: 'review_id'
+});
+Comment.belongsTo(Review, {
+  foreignKey: 'review_id'
+});
 
 module.exports = { User, State, Review, Comment };

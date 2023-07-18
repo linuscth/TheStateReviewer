@@ -3,29 +3,38 @@ const { Model, DataTypes } = require('sequelize');
 // Import connection
 const sequelize = require('../config/connection');
 
-class Comment extends Model {}
+class Comment extends Model { }
 
 // Define comment attributes
 Comment.init(
     {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-      },
-      user_comment: {
-        type: DataTypes.TEXT,
-        allowNull: false
-      },
-      user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'user',
-          key: 'id'
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        user_comment: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            },
+        },
+        review_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "review",
+                key: "id"
+            },
         }
-      }
+
     },
     {
       sequelize,
