@@ -1,3 +1,8 @@
 const router = require('express').Router();
-const withAuth = reuqire()
-router
+
+// Render welcome page
+router.get('/', (req, res) => {
+  res.render('welcome');
+});
+
+module.exports = router;
