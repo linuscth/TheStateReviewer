@@ -19,6 +19,7 @@ const loginFormHandler = async (event) => {
     }
 };
 
+
 const signupFormHandler = async (event) => {
     event.preventDefault();
     const username = document.querySelector('#name-signup').value.trim();
@@ -28,6 +29,8 @@ const signupFormHandler = async (event) => {
         const response = await fetch('/api/users/register', {
             method: 'POST',
             body: JSON.stringify({ username, email, password }),
+
+
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
