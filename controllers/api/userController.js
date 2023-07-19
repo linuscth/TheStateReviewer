@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User } = require('../../models');
 
 // User registration controller
 const createUser = async (req, res) => {
