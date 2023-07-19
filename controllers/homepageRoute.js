@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const { Comment, Review, State, User } = require('../models')
@@ -16,4 +17,10 @@ router.get('/dashboard', async (req, res) => {
     }
 })
 
-module.exports = router; 
+
+// Render the welcome page
+router.get('/', (req, res) => {
+res.render('welcome');
+});
+
+module.exports = router;
