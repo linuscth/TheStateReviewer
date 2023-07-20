@@ -40,7 +40,6 @@ router.get('/addcomment/:id', withAuth, async (req, res) => {
                 include: { model: Comment, attributes: ['user_comment', 'createdAt'], include: { model: User, attributes: ['username'] } }
             });
         const reviewsPlusComments = reviewPlusCommentsData.get({ plain: true })
-        console.log(reviewsPlusComments);
         res.render('addComment', {
             reviewsPlusComments,
             logged_in: req.session.logged_in
@@ -51,6 +50,22 @@ router.get('/addcomment/:id', withAuth, async (req, res) => {
 
 })
 
+router.get('/addreview/:state_id', withAuth, async (req, res) => {
+    try {
+        const targetStateId = req.params.state_id;
+        const stateData = await State.findByPk(targetStateId)
+        const state = stateData.get({ plain: true })
+
+        console.log(state);
+        res.render('addReview', {
+            state,
+            logged_in: req.session.logged_in
+        })
+    } catch (error) {
+        res.status(500).json(error)
+    }
+
+})
 
 
 module.exports = router;
