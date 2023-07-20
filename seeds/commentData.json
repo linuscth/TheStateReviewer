@@ -1,6 +1,6 @@
 [
     {
-        "user_comment": "damn bro you should also try their beef tung, its so goood! ",
+        "user_comment": "damn bro you should also try their beef tongue, its so goood! ",
         "user_id": 3,
         "review_id": 1
     },
@@ -23,5 +23,25 @@
         "user_comment": "def should visit especially if you have kids, worth it!  ",
         "user_id": 6,
         "review_id": 5
+    },
+    {
+        "user_comment": "oh i remember they also have a store in Vagas, def worth to try it! ",
+        "user_id": 6,
+        "review_id": 1
+    },
+    {
+        "user_comment": "thanks for the suggestion! ",
+        "user_id": 4,
+        "review_id": 1
+    },
+    {
+        "user_comment": "i like the one in downtown more! ",
+        "user_id": 2,
+        "review_id": 1
+    },
+    {
+        "user_comment": "not a big fan of mexican food but this is exceptional! ",
+        "user_id": 3,
+        "review_id": 1
     }
 ]

@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const query = searchInput.value;
 
+
+        Handlebars.registerHelper("searchValue", function () {
+            return query;
+        });
+
         // Use the Nominatim API to geocode the search query
         fetch('https://nominatim.openstreetmap.org/search?q=' + query + '&format=json')
             .then(function (response) {
@@ -40,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // Update the map view to the search result position
                     map.setView([lat, lon], 8);
+
+
                 } else {
                     console.log('No results found');
                 }
@@ -49,3 +56,4 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 });
+
