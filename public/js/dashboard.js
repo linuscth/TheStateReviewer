@@ -18,10 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const query = searchInput.value;
 
 
-        Handlebars.registerHelper("searchValue", function () {
-            return query;
-        });
-
         // Use the Nominatim API to geocode the search query
         fetch('https://nominatim.openstreetmap.org/search?q=' + query + '&format=json')
             .then(function (response) {

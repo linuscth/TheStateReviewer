@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Comment, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
+// api/comments route
 router.get('/', async (req, res) => {
     try {
         const getAllCommentData = await Comment.findAll({
@@ -16,7 +18,7 @@ router.get('/', async (req, res) => {
         res.status(500).json(error)
     }
 })
-router.post('/:review_id', async (req, res) => {
+router.post('/:review_id', withAuth, async (req, res) => {
     try {
         const targetReviewId = req.params.review_id;
 
