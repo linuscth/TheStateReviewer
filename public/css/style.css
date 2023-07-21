@@ -1,0 +1,23 @@
+.rating {
+    display: inline-block;
+    font-size: 0; /* Prevent the space between radio buttons */
+  }
+  
+  .rating input {
+    display: none; /* Hide the radio buttons */
+  }
+  
+  .rating label {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('https://www.iconpacks.net/icons/2/free-rating-star-icon-2766-thumb.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style for the selected stars */
+  .rating input:checked + label {
+    background-image: url('https://pixlok.com/wp-content/uploads/2021/07/Rating-SVG-Icon-s9fd.png'); 
+  }
+  

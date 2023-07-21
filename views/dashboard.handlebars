@@ -1,34 +1,40 @@
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+</head>
 <div class="container d-flex">
     <div class="col-5">
-        <h1>Map</h1>
-    <div id="mapContainer"></div>
-    <form id="searchForm">
-      <input type="text" id="searchInput" placeholder="Search.." name="search">
-      <button type="submit" class="btn btn-success btn-sm">Search</button>
-    </form>
+        <h1 id="stateTitle">Select a State</h1>
+        <div id="mapContainer" style="height: 400px;"></div>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search.." name="search">
+            <button type="submit" class="btn btn-success btn-sm">Search</button>
+        </form>
     </div>
+    {{#if seachValue}}
+    <h2>testing</h2>
+
+    {{else}}
     <div class="dashboardDiv col-7">
         {{#each reviews as |review|}}
         <div class="reviewCard card p-3 ">
-
             <div
-                class="card-header  p-3  d-flex justify-content-between align-items-center p-3 mb-2 bg-success-subtle text-emphasis-success">
+                class="card-header p-3 d-flex justify-content-between align-items-center p-3 mb-2 bg-success-subtle text-emphasis-success">
                 <h4>{{review.review_topic}}</h4>
                 <div>
                     <p>posted by {{review.user.username}}</p>
                 </div>
             </div>
-
             <div class="card-body border border-2 rounded-bottom">
                 <p class="text-body-secondary">{{review.review_details}}</p>
                 <p>on {{format_date review.createdAt}}</p>
             </div>
-
         </div>
         {{/each}}
-
     </div>
+    {{/if}}
 </div>
 
-<script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.14.0/maps/maps-web.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 <script src="/js/dashboard.js"></script>

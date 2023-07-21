@@ -8,6 +8,7 @@ const createUser = async (req, res) => {
 
         req.session.save(() => {
             req.session.userId = newUser.id;
+            req.session.logged_in = true;
             res.status(200).json(newUser);
         });
     } catch (err) {
@@ -28,6 +29,7 @@ const loginUser = async (req, res) => {
 
         req.session.save(() => {
             req.session.userId = user.id;
+            req.session.logged_in = true;
             res.status(200).json(user);
         });
     } catch (err) {
