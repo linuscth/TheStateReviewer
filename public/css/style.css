@@ -23,6 +23,9 @@
   
   .dashboardDiv {
     padding-left: 60px;
+    height: 80vh;
+    overflow-y: auto;
+    padding-right: 20px;
   }
 
   #stateTitle,
@@ -32,4 +35,8 @@
 
   #searchForm {
     padding-top: 15px;
+  }
+
+  .reviews-container {
+    margin-bottom: 20px;
   }
