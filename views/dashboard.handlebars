@@ -9,7 +9,7 @@
         <div id="mapContainer" style="height: 400px;"></div>
         <form id="searchForm">
             <input type="text" id="searchInput" placeholder="Search.." name="search">
-            <button type="submit" class="btn btn-primary btn-sm">Search</button>
+            <button type="submit" class="btn btn-success btn-sm">Search</button>
         </form>
     </div>
     <div class="dashboardDiv col-7">
@@ -28,7 +28,7 @@
                     <p>on {{format_date review.createdAt}}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="/addcomment/{{review.id}}" class="btn btn-primary">Add Comment</a>
+                    <a href="/addcomment/{{review.id}}" class="btn btn-success">Add Comment</a>
                 </div>
             </div>
             {{/each}}
