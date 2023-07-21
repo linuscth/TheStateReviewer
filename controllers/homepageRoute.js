@@ -26,10 +26,9 @@ router.get('/', (req, res) => {
 });
 
 // log out route 
-router.get('/logout', (req, res) => {
-    res.render('logout')
-})
-
+router.get('/logout', async (req, res) => {
+    res.render('logout');
+});
 
 router.get('/addcomment/:id', withAuth, async (req, res) => {
     try {
