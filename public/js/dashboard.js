@@ -57,22 +57,22 @@ document.addEventListener('DOMContentLoaded', function () {
               return response.json();
             })
             .then(function (data) {
+
+              // Clear existing reviews
+              dashboardDiv.innerHTML = '';
+
+              // add a button that will lead user to add review
+              const addReviewDiv = document.createElement('div');
+              addReviewDiv.className = 'd-grid gap-2 addReviewDiv'
+              const addReviewBtn = document.createElement('a');
+              addReviewBtn.className = 'btn btn-primary m-3';
+              addReviewBtn.href = `/addreview`;
+              addReviewBtn.setAttribute('role', 'button');
+              addReviewBtn.innerText = 'Add A Review';
+              addReviewDiv.append(addReviewBtn);
+              dashboardDiv.append(addReviewDiv);
+
               if (data && data.length > 0) {
-                // Clear existing reviews
-                dashboardDiv.innerHTML = '';
-
-                // add a button that will lead user to add review
-                const addReviewDiv = document.createElement('div');
-                addReviewDiv.className = 'd-grid gap-2 addReviewDiv'
-                const addReviewBtn = document.createElement('a');
-                addReviewBtn.className = 'btn btn-primary m-3';
-                addReviewBtn.href = `/addreview/${data[0].state.id}`;
-                addReviewBtn.setAttribute('role', 'button');
-                addReviewBtn.innerText = 'Add A Review';
-                addReviewDiv.append(addReviewBtn);
-                dashboardDiv.append(addReviewDiv);
-
-
                 // Render the reviews
                 data.forEach(function (review) {
                   const reviewCard = document.createElement('div');
@@ -104,9 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
                   dashboardDiv.appendChild(reviewCard);
                 });
               } else {
-                // Clear existing reviews
-                dashboardDiv.innerHTML = '';
-
                 // Display "No results found" message
                 const noResults = document.createElement('p');
                 noResults.textContent = 'No results found';

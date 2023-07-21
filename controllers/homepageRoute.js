@@ -50,15 +50,16 @@ router.get('/addcomment/:id', withAuth, async (req, res) => {
 
 })
 
-router.get('/addreview/:state_id', withAuth, async (req, res) => {
-    try {
-        const targetStateId = req.params.state_id;
-        const stateData = await State.findByPk(targetStateId)
-        const state = stateData.get({ plain: true })
 
-        console.log(state);
+
+router.get('/addreview', withAuth, async (req, res) => {
+    try {
+        const stateData = await State.findAll()
+        const states = stateData.map((eachState) => eachState.get({ plain: true }))
+
+        console.log(states);
         res.render('addReview', {
-            state,
+            states,
             logged_in: req.session.logged_in
         })
     } catch (error) {
@@ -66,6 +67,5 @@ router.get('/addreview/:state_id', withAuth, async (req, res) => {
     }
 
 })
-
 
 module.exports = router;
