@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
               return response.json();
             })
             .then(function (data) {
-
               // Clear existing reviews
               dashboardDiv.innerHTML = '';
 
@@ -65,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
               const addReviewDiv = document.createElement('div');
               addReviewDiv.className = 'd-grid gap-2 addReviewDiv'
               const addReviewBtn = document.createElement('a');
-              addReviewBtn.className = 'btn btn-primary m-3';
+              addReviewBtn.className = 'btn btn-success m-3';
               addReviewBtn.href = `/addreview`;
               addReviewBtn.setAttribute('role', 'button');
               addReviewBtn.innerText = 'Add A Review';
@@ -98,8 +97,18 @@ document.addEventListener('DOMContentLoaded', function () {
                   cardBody.appendChild(reviewDetails);
                   cardBody.appendChild(createdAt);
 
+                  const addCommentBtn = document.createElement('a');
+                  addCommentBtn.className = 'btn btn-success';
+                  addCommentBtn.href = `/addcomment/${review.id}`;
+                  addCommentBtn.innerText = 'Add A Comment';
+
+                  const commentDiv = document.createElement('div');
+                  commentDiv.className = 'd-grid gap-2';
+                  commentDiv.appendChild(addCommentBtn);
+
                   reviewCard.appendChild(cardHeader);
                   reviewCard.appendChild(cardBody);
+                  reviewCard.appendChild(commentDiv);
 
                   dashboardDiv.appendChild(reviewCard);
                 });
