@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function format_date(date) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(date).toLocaleDateString(undefined, options);
-  }  
+  }
 
   // Handle the search form submission
   const searchForm = document.querySelector('#searchForm');
@@ -60,6 +60,18 @@ document.addEventListener('DOMContentLoaded', function () {
               if (data && data.length > 0) {
                 // Clear existing reviews
                 dashboardDiv.innerHTML = '';
+
+                // add a button that will lead user to add review
+                const addReviewDiv = document.createElement('div');
+                addReviewDiv.className = 'd-grid gap-2 addReviewDiv'
+                const addReviewBtn = document.createElement('a');
+                addReviewBtn.className = 'btn btn-primary m-3';
+                addReviewBtn.href = `/addreview/${data[0].state.id}`;
+                addReviewBtn.setAttribute('role', 'button');
+                addReviewBtn.innerText = 'Add A Review';
+                addReviewDiv.append(addReviewBtn);
+                dashboardDiv.append(addReviewDiv);
+
 
                 // Render the reviews
                 data.forEach(function (review) {
