@@ -1,7 +1,14 @@
 <div class="page-content">
 <div class="p-5">
     <form class="m-5 border border-3 p-5 bg-body-tertiary addReviewForm" id="{{state.id}}">
-        <h5 class="text-success-emphasis mb-3">add review to {{state.name}}</h5>
+        <h5 class="text-success-emphasis mb-3">let's Add Review!</h5>
+        <select class="form-select  p-2 my-3 pickState" aria-label="Default select example">
+            <option selected>Open this select state</option>
+            {{#each states as |state|}}
+            <option value="{{state.id}}">{{state.name}}</option>
+            {{/each}}
+        </select>
+
         <div class="mb-3 input-group">
             <span class="input-group-text reviewTopic">Topic </span>
             <input type="text" class="form-control inputReviewTopic">

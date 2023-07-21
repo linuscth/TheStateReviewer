@@ -7,7 +7,7 @@ const addReview = async (event) => {
 
     const rating = document.querySelector('input[name="rating"]:checked').value;
 
-    const state_id = document.querySelector('.addReviewForm').id;
+    const state_id = document.querySelector('.pickState').value;
     console.log(rating);
     console.log(review_topic);
     console.log(review_details);
