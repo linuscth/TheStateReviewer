@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>State Explorer</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -13,9 +13,30 @@
 </head>
 
 <body>
-    <h2>main handlwbars</h2>
-    <hr>
+    <nav class="navbar navbar-expand-lg bg-success-subtle">
+        <div class="container d-flex justify-content-center">
+            <a class="navbar-brand text-black" href="/">State Explorer</a>
+            {{#if loggedIn}}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+    </nav>
+
     {{{body}}}
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-DZy0YhjV2K4LCwStfN0VnGy4eGxi7Mvi5kQWr4/7pYYo/3c+Ys8nx5gVKMvDzqGZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
