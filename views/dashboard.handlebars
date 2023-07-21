@@ -11,10 +11,6 @@
             <button type="submit" class="btn btn-success btn-sm">Search</button>
         </form>
     </div>
-    {{#if seachValue}}
-    <h2>testing</h2>
-
-    {{else}}
     <div class="dashboardDiv col-7">
         {{#each reviews as |review|}}
         <div class="reviewCard card p-3 ">
@@ -34,8 +30,8 @@
             </div>
         </div>
         {{/each}}
+
     </div>
-    {{/if}}
 </div>
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>

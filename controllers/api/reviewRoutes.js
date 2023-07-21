@@ -24,10 +24,14 @@ router.get('/state/:stateName', async (req, res) => {
 
     // Retrieve all reviews for a specific state
     const reviews = await Review.findAll({
-      include: {
+      include: [{
         model: State,
-        where: { name: stateName }
-      }
+        where: { name: stateName },
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }]
     });
 
     res.status(200).json(reviews);
@@ -39,27 +43,27 @@ router.get('/state/:stateName', async (req, res) => {
 
 
 router.post('/:state_id', withAuth, async (req, res) => {
-    try {
-        const targetStateId = req.params.state_id;
+  try {
+    const targetStateId = req.params.state_id;
 
-        const { rating, review_topic, review_details } = req.body;
+    const { rating, review_topic, review_details } = req.body;
 
-        if (!req.body) {
-            res.status(404).json({ message: 'no user_comment ' })
-            return
-        }
-
-        const createReview = await Review.create({
-            ...req.body,
-            user_id: req.session.userId,
-            state_id: targetStateId
-        })
-
-
-        res.status(200).json(createReview)
-    } catch (error) {
-        res.status(500).json(error)
+    if (!req.body) {
+      res.status(404).json({ message: 'no user_comment ' })
+      return
     }
+
+    const createReview = await Review.create({
+      ...req.body,
+      user_id: req.session.userId,
+      state_id: targetStateId
+    })
+
+
+    res.status(200).json(createReview)
+  } catch (error) {
+    res.status(500).json(error)
+  }
 })
 
 module.exports = router
