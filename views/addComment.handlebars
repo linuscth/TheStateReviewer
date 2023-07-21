@@ -1,49 +1,45 @@
-<div class="dashboardDiv col-10 ">
-    <div class="reviewCard card p-3 " id="{{reviewsPlusComments.id}}">
-        <div
-            class="card-header p-3 d-flex justify-content-between align-items-center p-3 mb-2 bg-success-subtle text-emphasis-success">
-
-            <h4>{{reviewsPlusComments.review_topic}}</h4>
-            {{!-- <div>
-                <p>posted by {{}}</p>
-            </div> --}}
-        </div>
-        <div class="card-body border border-2 rounded-bottom p-2">
-            <p class="text-body-secondary">{{reviewsPlusComments.review_details}}</p>
-            <p>on {{format_date reviewsPlusComments.createdAt}}</p>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <div class="d-flex justify-content-center ">
-        <form class="addCommentDiv col-8">
-            <div class="form-floating border border-5">
-                <textarea class="form-control commentText " placeholder="Leave a comment here" id="floatingTextarea2"
-                    style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Comments</label>
+<div class="page-content">
+<div class="d-flex justify-content-center">
+    <div class="dashboardDiv col-10">
+        <div class="reviewCard card p-3" id="{{reviewsPlusComments.id}}">
+            <div class="card-header p-3 d-flex justify-content-between align-items-center p-3 mb-2 bg-success-subtle text-emphasis-success">
+                <h4>{{reviewsPlusComments.review_topic}}</h4>
             </div>
-            <div class=" d-flex justify-content-center p-2 ">
-                <button type="submit" class="btn btn-success btn-md addCommentBtn">Add Comment</button>
-            </div>
-        </form>
-    </div>
-    <br><br><br>
-
-    <div>
-        {{#each reviewsPlusComments.comments as |comment|}}
-        <div class="card p-2   ">
-            <div class="card-body border border-2 rounded-bottom">
-                <div class="d-flex justify-content-between bg-success-subtle">
-                    <p>by {{comment.user.username}}</p>
-                    <p>on {{format_date comment.createdAt}}</p>
-                </div>
-
-                <p class="text-body-secondary">{{ comment.user_comment}}</p>
+            <div class="card-body border border-2 rounded-bottom p-2">
+                <p class="text-body-secondary">{{reviewsPlusComments.review_details}}</p>
+                <p>on {{format_date reviewsPlusComments.createdAt}}</p>
             </div>
         </div>
         <br>
-        {{/each}}
+        <hr>
+        <div class="d-flex justify-content-center">
+            <form class="addCommentDiv col-8">
+                <div class="form-floating border border-5">
+                    <textarea class="form-control commentText" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                </div>
+                <div class="d-flex justify-content-center p-2">
+                    <button type="submit" class="btn btn-primary btn-md addCommentBtn">Add Comment</button>
+                </div>
+            </form>
+        </div>
+        <br><br><br>
+        <div>
+            {{#each reviewsPlusComments.comments as |comment|}}
+            <div class="card p-2">
+                <div class="card-body border border-2 rounded-bottom">
+                    <div class="d-flex justify-content-between bg-success-subtle">
+                        <p>by {{comment.user.username}}</p>
+                        <p>on {{format_date comment.createdAt}}</p>
+                    </div>
+                    <p class="text-body-secondary">{{ comment.user_comment}}</p>
+                </div>
+            </div>
+            <br>
+            {{/each}}
+        </div>
     </div>
+</div>
 </div>
 
 <script src="/js/addComment.js"></script>
