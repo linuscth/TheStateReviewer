@@ -21,3 +21,15 @@
     background-image: url('https://pixlok.com/wp-content/uploads/2021/07/Rating-SVG-Icon-s9fd.png'); 
   }
   
+  .dashboardDiv {
+    padding-left: 60px;
+  }
+
+  #stateTitle,
+  #searchForm {
+  text-align: center;
+  }
+
+  #searchForm {
+    padding-top: 15px;
+  }
