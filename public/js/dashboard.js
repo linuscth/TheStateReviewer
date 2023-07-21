@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.querySelector('#searchInput');
   const dashboardDiv = document.querySelector('.dashboardDiv');
   const stateTitle = document.querySelector('#stateTitle');
+  const searchBox = document.querySelector('.searchBox')
 
   searchForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(function (data) {
               // Clear existing reviews
               dashboardDiv.innerHTML = '';
+              searchBox.innerHTML = '';
 
               // add a button that will lead user to add review
               const addReviewDiv = document.createElement('div');
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
               addReviewBtn.setAttribute('role', 'button');
               addReviewBtn.innerText = 'Add A Review';
               addReviewDiv.append(addReviewBtn);
-              dashboardDiv.append(addReviewDiv);
+              searchBox.append(addReviewDiv);
 
               if (data && data.length > 0) {
                 // Render the reviews

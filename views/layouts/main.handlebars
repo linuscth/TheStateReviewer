@@ -13,30 +13,48 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-success-subtle">
-        <div class="container d-flex justify-content-center">
-            <a class="navbar-brand text-black" href="/">State Explorer</a>
-            {{#if loggedIn}}
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="/logout">Logout</a>
-                    </li>
-                </ul>
-            </div>
-            {{/if}}
-        </div>
-    </nav>
+    <header class="rounded-3  text-light border border-success-subtle rounded-3 mb-4">
+        <nav class="py-3 border-bottom border-success border-3 bg-success-subtle text-success-emphasis bg-image" style="
+    background-image: url('https://www.hovia.com/app/uploads/mint-green-geometric-wallpaper-mural-Room-1024x664.jpg');
+    height: 10vh;
+  ">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav fs-4 fw-normal ">
 
+                <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active" href="/">Home</a>
+                </li>
+
+                <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active"
+                        href="/dashboard">Dashboard</a></li>
+                {{#if logged_in}}
+                <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active logOut"
+                        href="/logout">Logout</a>
+                </li>
+                {{else}}
+                <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active" href="/">Login</a>
+                </li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
     {{{body}}}
+    <footer class=" bg-success text-center text-white">
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-2" style="
+    background-image: url('https://www.hovia.com/app/uploads/mint-green-geometric-wallpaper-mural-Room-1024x664.jpg');
+    height: 5vh;
+  ">
+            © 2019 Copyright:
+            <a class="text-white" href="https://github.com/linuscth">github.com/linuscth</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-DZy0YhjV2K4LCwStfN0VnGy4eGxi7Mvi5kQWr4/7pYYo/3c+Ys8nx5gVKMvDzqGZ" crossorigin="anonymous"></script>
+        integrity="sha384-DZy0YhjV2K4LCwStfN0VnGy4eGxi7Mvi5kQWr4/7pYYo/3c+Ys8nx5gVKMvDzqGZ"
+        crossorigin="anonymous"></script>
+    <script src="/js/logout.js"></script>
 </body>
 
 </html>
