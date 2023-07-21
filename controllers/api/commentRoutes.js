@@ -17,7 +17,27 @@ router.get('/', async (req, res) => {
     } catch (error) {
         res.status(500).json(error)
     }
-})
+});
+
+router.get('/:id', async (req, res) => {
+    try {
+      const reviewId = req.params.id;
+  
+      // Retrieve the review from the database based on the reviewId
+      const review = await Review.findByPk(reviewId);
+  
+      if (!review) {
+        res.status(404).json({ message: 'Review not found' });
+        return;
+      }
+  
+      res.render('addComment', { review });
+    } catch (error) {
+      console.log('Error:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
 router.post('/:review_id', withAuth, async (req, res) => {
     try {
         const targetReviewId = req.params.review_id;
@@ -40,7 +60,7 @@ router.post('/:review_id', withAuth, async (req, res) => {
     } catch (error) {
         res.status(500).json(error)
     }
-})
+});
 
 
 module.exports = router

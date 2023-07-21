@@ -29,6 +29,9 @@
                 <p class="text-body-secondary">{{review.review_details}}</p>
                 <p>on {{format_date review.createdAt}}</p>
             </div>
+            <div class="card-footer">
+                <a href="/addcomment/{{review.id}}" class="btn btn-primary">Add Comment</a>
+            </div>
         </div>
         {{/each}}
     </div>
