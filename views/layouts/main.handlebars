@@ -13,16 +13,15 @@
 </head>
 
 <body>
-    <header class="rounded-3  text-light  rounded-3 mb-4">
-        <nav class="py-3 bg-success-subtle text-success-emphasis bg-image boarder border-bottom border-4" style="
+    <header class="rounded-3 text-light rounded-3 mb-4">
+    <nav class="py-3 bg-success-subtle text-success-emphasis bg-image boarder border-bottom border-4" style="
     background-image: url('https://www.hovia.com/app/uploads/mint-green-geometric-wallpaper-mural-Room-1024x664.jpg');
     height: 10vh;
   ">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
             <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav fs-4 fw-normal ">
-
                 <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active" href="/">Home</a>
                 </li>
-
                 <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active"
                         href="/dashboard">Dashboard</a></li>
                 {{#if logged_in}}
@@ -34,11 +33,10 @@
                 </li>
                 {{/if}}
             </ul>
-        </nav>
-        <div class="py-3  text-success-emphasis">
-            <h2>The State Reviewer</h2>
+            <h2 class="text-end">The State Reviewer</h2>
         </div>
-    </header>
+    </nav>
+</header>
     {{{body}}}
     <footer class=" bg-success text-center text-white">
         <!-- Grid container -->
@@ -48,7 +46,7 @@
     height: 5vh;
   ">
             © 2019 Copyright:
-            <a class="text-white" href="https://github.com/linuscth">github.com/linuscth</a>
+            <a class="text-white" href="https://github.com/linuscth">The State Reviewer</a>
         </div>
         <!-- Copyright -->
     </footer>
