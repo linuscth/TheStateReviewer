@@ -33,5 +33,187 @@
         "review_details": "If you are looking for some of the best places to go in Phoenix, you cannot go wrong with the popular Phoenix Zoo.The zoo boasts several exhibits, such as the African savanna, Asian forest, and South American rainforest, allowing visitors to get up close with exotic animals. All these features make the Phoenix Zoo a must-visit attraction in Phoenix.",
         "state_id": 3,
         "user_id": 3
-    }
+    },
+    {
+        "rating": 4,
+        "review_topic": "Las Vegas ",
+        "review_details": "Las Vegas is a great time other than blowing all of my money.",
+        "state_id": 29,
+        "user_id": 6
+    },
+    {
+        "rating": 5,
+        "review_topic": "Rocky Mountains ",
+        "review_details": "Colorado is full of natural beauty and the Rocky Mountains are right at the forefront. I can't wait to go back.",
+        "state_id": 6,
+        "user_id": 2
+    },
+    {
+        "rating": 3,
+        "review_topic": "NYC ",
+        "review_details": "It was dirty but the pizza was good.",
+        "state_id": 33,
+        "user_id": 1
+    },
+    {
+        "rating": 2,
+        "review_topic": "NYC ",
+        "review_details": "I unfortunately didn't see a big apple.",
+        "state_id": 33,
+        "user_id": 7
+    },
+    {
+        "rating": 4,
+        "review_topic": "Texas ",
+        "review_details": "They were right. Everything is bigger in Texas.",
+        "state_id": 44,
+        "user_id": 5
+    },
+    {
+        "rating": 3,
+        "review_topic": "Cold ",
+        "review_details": "The cheese was frozen solid so I couldn't even eat it. The people were nice though.",
+        "state_id": 50,
+        "user_id": 4
+    },
+    {
+        "rating": 5,
+        "review_topic": "The Scenery ",
+        "review_details": "I could not get over how pretty the state of Washington was. Highly recommended that people come here.",
+        "state_id": 48,
+        "user_id": 6
+    },
+    {
+        "rating": 4,
+        "review_topic": "The Scenery ",
+        "review_details": "I could not get over how pretty the state of Washington was. Highly recommended that people come here.",
+        "state_id": 48,
+        "user_id": 6
+    },
+    {
+        "rating": 4,
+        "review_topic": "Salt Lake City",
+        "review_details": "Enjoyed the picturesque mountains and the clean, friendly city vibe. The winter skiing is top-notch!",
+        "state_id": 45,
+        "user_id": 1
+      },
+      {
+        "rating": 3,
+        "review_topic": "Nashville Music Scene",
+        "review_details": "Nashville was bustling with live music everywhere you turn. Great food and people. A bit crowded in some places but overall a great experience.",
+        "state_id": 43,
+        "user_id": 2
+      },
+      {
+        "rating": 5,
+        "review_topic": "Chicago Deep Dish Pizza",
+        "review_details": "Had my first deep dish pizza in Chicago. It's a whole different world of pizza. Delicious!",
+        "state_id": 14,
+        "user_id": 2
+      },
+      {
+        "rating": 2,
+        "review_topic": "Heat in Arizona",
+        "review_details": "The state is just too hot in summer, would recommend visiting in the winter months instead.",
+        "state_id": 3,
+        "user_id": 4
+      },
+      {
+        "rating": 4,
+        "review_topic": "Miami Nightlife",
+        "review_details": "Miami's nightlife is vibrant and diverse. There are options for everyone and you can find something fun to do any night of the week.",
+        "state_id": 10,
+        "user_id": 5
+      },
+      {
+        "rating": 1,
+        "review_topic": "Traffic in Los Angeles",
+        "review_details": "The traffic is unbearable. Spent most of my time stuck in my car. Need a better public transport system.",
+        "state_id": 5,
+        "user_id": 6
+      },
+      {
+        "rating": 5,
+        "review_topic": "Nature in Oregon",
+        "review_details": "The nature in Oregon is breathtaking. Loved hiking in the forests and the coast is simply stunning.",
+        "state_id": 38,
+        "user_id": 7
+      },
+      {
+        "rating": 3,
+        "review_topic": "Boston's Historical Sites",
+        "review_details": "It was really cool to see places like the Paul Revere House and the Boston Tea Party Ships. The Freedom Trail was a fun way to spend the day.",
+        "state_id": 22,
+        "user_id": 2
+      },
+      {
+        "rating": 5,
+        "review_topic": "New Orleans Jazz",
+        "review_details": "The live jazz music in New Orleans is unparalleled. Don't forget to try the beignets!",
+        "state_id": 19,
+        "user_id": 5
+      },
+      {
+        "rating": 4,
+        "review_topic": "Hawaii's Beaches",
+        "review_details": "The beaches in Hawaii are beautiful. The water is clear and the sand is soft. Great place for a vacation.",
+        "state_id": 12,
+        "user_id": 1
+      },
+      {
+        "rating": 3,
+        "review_topic": "Kansas City BBQ",
+        "review_details": "The BBQ in Kansas City is delicious. Tried several BBQ joints and all were fantastic.",
+        "state_id": 17,
+        "user_id": 7
+      },
+      {
+        "rating": 2,
+        "review_topic": "Las Vegas Strip",
+        "review_details": "While there's a lot of entertainment, it was too crowded and noisy for my taste.",
+        "state_id": 29,
+        "user_id": 3
+      },
+      {
+        "rating": 4,
+        "review_topic": "Exploring Yellowstone",
+        "review_details": "Yellowstone National Park is a treasure. The geysers, wildlife, and scenery were all unforgettable. Just brace yourself for lots of driving within the park.",
+        "state_id": 51,
+        "user_id": 4
+      },
+      {
+        "rating": 5,
+        "review_topic": "Oregon's Natural Beauty",
+        "review_details": "Oregon's Crater Lake is one of the most beautiful sights I've ever seen. It's absolutely serene and breathtaking.",
+        "state_id": 38,
+        "user_id": 3
+      },
+      {
+        "rating": 4,
+        "review_topic": "The Liberty Bell in Philadelphia",
+        "review_details": "The Liberty Bell and the surrounding historical district are a must-see when in Pennsylvania. Very informative and interesting!",
+        "state_id": 39,
+        "user_id": 5
+      },
+      {
+        "rating": 3,
+        "review_topic": "Miami's Nightlife",
+        "review_details": "Miami has a very active nightlife. There's always something to do, from clubs to late-night beach parties.",
+        "state_id": 10,
+        "user_id": 6
+      },
+      {
+        "rating": 2,
+        "review_topic": "Nashville's Country Music Scene",
+        "review_details": "The music scene in Nashville is impressive, especially if you're a fan of country. The Grand Ole Opry is a must-visit.",
+        "state_id": 43,
+        "user_id": 7
+      },
+      {
+        "rating": 5,
+        "review_topic": "The Great Smoky Mountains",
+        "review_details": "The Great Smoky Mountains National Park is a beautiful place for hiking and camping. A nature lover's paradise!",
+        "state_id": 34,
+        "user_id": 1
+      }
 ]
