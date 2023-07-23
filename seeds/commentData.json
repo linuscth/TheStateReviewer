@@ -43,5 +43,35 @@
         "user_comment": "not a big fan of mexican food but this is exceptional! ",
         "user_id": 3,
         "review_id": 1
+    },
+    {
+        "user_comment": "Deep dish isn't even pizza! ",
+        "user_id": 3,
+        "review_id": 16
+    },
+    {
+        "user_comment": "I've never been but I heard it's pretty cool! ",
+        "user_id": 6,
+        "review_id": 15
+    },
+    {
+        "user_comment": "Nah it ain't even that cool. ",
+        "user_id": 1,
+        "review_id": 18
+    },
+    {
+        "user_comment": "I couldn't agree more. ",
+        "user_id": 2,
+        "review_id": 25
+    },
+    {
+        "user_comment": "Did you try cheese curds? ",
+        "user_id": 2,
+        "review_id": 11
+    },
+    {
+        "user_comment": "Yeah it is too hot. I don't know how people do it. ",
+        "user_id": 7,
+        "review_id": 17
     }
 ]
